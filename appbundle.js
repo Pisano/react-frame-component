@@ -21456,11 +21456,14 @@
 	      var props = _extends({}, this.props, {
 	        children: undefined // The iframe isn't ready so we drop children from props here. #12, #17
 	      });
+	      props.ref = props.frameRef;
+	
 	      delete props.head;
 	      delete props.initialContent;
 	      delete props.mountTarget;
 	      delete props.contentDidMount;
 	      delete props.contentDidUpdate;
+	      delete props.frameRef;
 	      return _react2.default.createElement('iframe', props);
 	    }
 	  }]);
